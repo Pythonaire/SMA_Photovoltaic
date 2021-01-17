@@ -7,15 +7,15 @@ Under "/usr/local/lib/python3.x/dist-packages/pyhap/resources/" aou will find pr
 Create 3 Version 4 UUID's with "https://www.uuidgenerator.net" for one service and two characteristics.  
 Extend services.json with:
 
-"PhotoVoltaic": {<br>
-<tab id=1>"OptionalCharacteristics": <br>
-     ["Name"],
-   "RequiredCharacteristics": [
-   "YieldDay",
-   "YieldYear"
-   ],
-   "UUID": "your UUID"
- }
+"Photo<tab id=t1>Voltaic": {<br>
+<tab to=t1>"OptionalCharacteristics": <br>
+<tab to=t1>["Name"],<br>
+<tab to=t1>"RequiredCharacteristics": [<br>
+<tab to=t1>"YieldDay",<br>
+<tab to=t1>"YieldYear"<br>
+<tab to=t1>],<br>
+<tab to=t1>"UUID": "your UUID"<br>
+ }<br>
  and characteristics.json with:
  
  
