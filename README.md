@@ -19,9 +19,7 @@ Extend services.json with:
  >
  and characteristics.json with:
  <br>
- 
- 
- "YieldDay": {<br>
+> "YieldDay": {<br>
       "Format": "float",<br>
       "Permissions": [<br>
          "pr",<br>
@@ -45,7 +43,7 @@ Extend services.json with:
       "minValue": 0,<br>
       "minStep": 0.001<br>
    }<br>
- 
+ >
  Follow the HAP-Python installation steps by using Photovoltaic.py.
  
 
