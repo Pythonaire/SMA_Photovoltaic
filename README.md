@@ -14,7 +14,7 @@ Extend services.json with:
 "YieldDay",<br>
 "YieldYear"<br>
 ],<br>
->"UUID": "your UUID"<br>
+"UUID": "your UUID"<br>
  }<br>
  and characteristics.json with:
  <br>
