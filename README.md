@@ -24,7 +24,7 @@ Extend services.json with:
  }
  and characteristics.json with:
  <br>
-> "YieldDay": {
+ "YieldDay": {
       "Format": "float",
       "Permissions": [
          "pr",
