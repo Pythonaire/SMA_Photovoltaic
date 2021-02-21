@@ -11,44 +11,44 @@ Create 3 Version 4 UUID's with "https://www.uuidgenerator.net" for one service a
 
 Extend services.json with:
 
->"PhotoVoltaic": {<br>
-"OptionalCharacteristics": <br>
-["Name"],<br>
-"RequiredCharacteristics": [<br>
-"YieldDay",<br>
-"YieldYear"<br>
-],<br>
-"UUID": "your UUID"<br>
- }<br>
- >
+#```#!/usr/bin/env python3
+
+"PhotoVoltaic": {
+"OptionalCharacteristics":
+["Name"],
+"RequiredCharacteristics": [
+"YieldDay",
+"YieldYear"
+],
+"UUID": "your UUID"
+ }
  and characteristics.json with:
  <br>
-> "YieldDay": {<br>
-      "Format": "float",<br>
-      "Permissions": [<br>
-         "pr",<br>
-         "ev"<br>
-      ],<br>
-      "UUID": "your UUID",<br>
-      "unit": "Wh",<br>
-          "maxValue": 100000,<br>
-          "minValue": 0,<br>
-          "minStep": 1<br>
-   },<br>
-   "YieldYear": {<br>
-      "Format": "float",<br>
-      "Permissions": [<br>
-         "pr",<br>
-         "ev"<br>
-      ],<br>
-      "UUID": "your UUID",<br>
-      "unit": "kWh",<br>
-      "maxValue": 100000000000,<br>
-      "minValue": 0,<br>
-      "minStep": 0.001<br>
-   }<br>
- >
- 
+> "YieldDay": {
+      "Format": "float",
+      "Permissions": [
+         "pr",
+         "ev"
+      ],
+      "UUID": "your UUID",
+      "unit": "Wh",
+          "maxValue": 100000,
+          "minValue": 0,
+          "minStep": 1
+   },
+   "YieldYear": {
+      "Format": "float",
+      "Permissions": [
+         "pr",
+         "ev"
+      ],
+      "UUID": "your UUID",
+      "unit": "kWh",
+      "maxValue": 100000000000,
+      "minValue": 0,
+      "minStep": 0.001
+   }
+```
  
  Follow the HAP-Python installation steps by using Photovoltaic class.
  
