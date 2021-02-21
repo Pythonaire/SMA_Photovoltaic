@@ -11,7 +11,7 @@ Create 3 Version 4 UUID's with "https://www.uuidgenerator.net" for one service a
 
 Extend services.json with:
 
-#```#!/usr/bin/env python3
+```#!/usr/bin/env python3
 
 "PhotoVoltaic": {
 "OptionalCharacteristics":
