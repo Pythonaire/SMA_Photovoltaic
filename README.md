@@ -23,7 +23,7 @@ Extend services.json with:
 "UUID": "your UUID"
  }
  and characteristics.json with:
- <br>
+ 
  "YieldDay": {
       "Format": "float",
       "Permissions": [
