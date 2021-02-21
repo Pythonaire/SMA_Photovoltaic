@@ -3,7 +3,7 @@ push SMA-Inverter Values to the Homekit, readable by Eve App
 
 Based on HAP-Python and SBFSpot.
 Older style SMA inverters my have readable Bluetooth interfaces. See the github SFBSpot project <https://github.com/SBFspot/SBFspot>, how to connect to the inverter and how to store inverter values into a SQLite database.
-Under "/usr/local/lib/python3.x/dist-packages/pyhap/resources/" you will find predefined Homkit services and characteristics for using in the HAP-Python module as preloaded_service. (if you like, you can use the HAP-Python loader modules for loading sepeately)
+Under "/usr/local/lib/python3.x/dist-packages/pyhap/resources/" you will find predefined Homekit services and characteristics for using in the HAP-Python module as preloaded_service.
 
 ## Installation
 
