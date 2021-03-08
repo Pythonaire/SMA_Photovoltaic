@@ -62,8 +62,8 @@ cd /usr/local/bin/sbfspot.3
 sudo nano daydata
 ```
 
-insert:
-log=/var/log/sbfspot.3/MyPlant_$(date '+%Y%m%d').log
+insert:  
+log=/var/log/sbfspot.3/MyPlant_$(date '+%Y%m%d').log  
 /usr/local/bin/sbfspot.3/SBFspot -v -ad1 -am0 -ae0  -nocsv >>$log
 
 ```#!bash
@@ -71,8 +71,8 @@ sudo chmod +x daydata
 sudo nano monthdata
 ```
 
-insert:
-log=/var/log/sbfspot.3/MyPlant_$(date '+%Y%m').log
+insert:  
+log=/var/log/sbfspot.3/MyPlant_$(date '+%Y%m').log  
 /usr/local/bin/sbfspot.3/SBFspot -v -sp0 -ad0 -am1 -ae1 -finq  -nocsv >>$log
 
 ```#!bash
@@ -81,8 +81,8 @@ sudo chmod +x monthdata
 crontab -e
 ```
 
-insert:
-*/5 6-22 * * * /usr/local/bin/sbfspot.3/daydata
+insert:  
+*/5 6-22 * * * /usr/local/bin/sbfspot.3/daydata  
 55 05 * * * /usr/local/bin/sbfspot.3/monthdata
 
 ```#!bash
