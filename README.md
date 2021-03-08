@@ -1,4 +1,4 @@
-# HAP-Python-Photovoltaic
+# HAP-Python-Photovoltaic  
 push SMA-Inverter Values to the Homekit, readable by Eve App
 
 Based on HAP-Python and SBFSpot.
@@ -27,7 +27,7 @@ cd ~/SBFspot/SBFspot
 make sqlite
 sudo make install_sqlite
 cd /home/pi/smadata
-sqlite3 SBFspot.db < /home/pwiechmann/SBFspot/SBFspot/CreateSQLiteDB.sql
+sqlite3 SBFspot.db < /home/YOUR_USER/SBFspot/SBFspot/CreateSQLiteDB.sql
 hcitool scan 
 cd /usr/local/bin/sbfspot.3
 sudo cp SBFspot.default.cfg SBFspot.cfg
