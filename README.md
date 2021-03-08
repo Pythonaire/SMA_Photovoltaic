@@ -62,7 +62,6 @@ sudo nano daydata
 ```
 
 #!/bin/bash
-#
 log=/var/log/sbfspot.3/MyPlant_$(date '+%Y%m%d').log
 /usr/local/bin/sbfspot.3/SBFspot -v -ad1 -am0 -ae0  -nocsv >>$log
 
@@ -72,7 +71,6 @@ sudo nano monthdata
 ```
 
 #!/bin/bash
-#
 log=/var/log/sbfspot.3/MyPlant_$(date '+%Y%m').log
 /usr/local/bin/sbfspot.3/SBFspot -v -sp0 -ad0 -am1 -ae1 -finq  -nocsv >>$log
 
