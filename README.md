@@ -44,7 +44,7 @@ Timezone ...
 Locale ....
 SQL_Database=/home/YOUR_USER/smadata/SBFspot.db
 
-if your wat to have CSV 
+if your want to have additional CSV-Files 
 CSV_Export=1
 
 Where are a lot of other configs. See <https://github.com/SBFspot/SBFspot>
@@ -59,7 +59,7 @@ Test the database connection:
 ```#!bash
 cd /usr/local/bin/sbfspot.3
 sudo nano daydata
-````
+```
 
 #!/bin/bash
 #
