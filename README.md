@@ -49,19 +49,20 @@ CSV_Export=1
 
 Where are a lot of other configs. See <https://github.com/SBFspot/SBFspot>
 
-Test the database connection: 
+Test the database connection:
+
 ```#!bash
 /usr/local/bin/sbfspot.3/SBFspot -v -finq -nocsv
 ```
 
-## Automation 
+## Automation
 
 ```#!bash
 cd /usr/local/bin/sbfspot.3
 sudo nano daydata
 ```
 
-#!/bin/bash
+insert:
 log=/var/log/sbfspot.3/MyPlant_$(date '+%Y%m%d').log
 /usr/local/bin/sbfspot.3/SBFspot -v -ad1 -am0 -ae0  -nocsv >>$log
 
@@ -69,6 +70,7 @@ log=/var/log/sbfspot.3/MyPlant_$(date '+%Y%m%d').log
 sudo chmod +x daydata
 sudo nano monthdata
 ```
+
 insert:
 log=/var/log/sbfspot.3/MyPlant_$(date '+%Y%m').log
 /usr/local/bin/sbfspot.3/SBFspot -v -sp0 -ad0 -am1 -ae1 -finq  -nocsv >>$log
@@ -91,6 +93,7 @@ sudo systemctl daemon-reload
 ## PHPLiteAdmin
 
 Your can use PHPLiteAdmin for additionally Web View by installing 
+
 ```#!bash
 sudo apt-get install -y phpliteadmin
 ```
