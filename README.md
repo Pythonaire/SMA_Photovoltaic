@@ -69,8 +69,7 @@ log=/var/log/sbfspot.3/MyPlant_$(date '+%Y%m%d').log
 sudo chmod +x daydata
 sudo nano monthdata
 ```
-
-#!/bin/bash
+insert:
 log=/var/log/sbfspot.3/MyPlant_$(date '+%Y%m').log
 /usr/local/bin/sbfspot.3/SBFspot -v -sp0 -ad0 -am1 -ae1 -finq  -nocsv >>$log
 
@@ -80,14 +79,14 @@ sudo chmod +x monthdata
 crontab -e
 ```
 
-#SBFspot
+insert:
 */5 6-22 * * * /usr/local/bin/sbfspot.3/daydata
 55 05 * * * /usr/local/bin/sbfspot.3/monthdata
 
 ```#!bash
 sudo systemctl enable cron
 sudo systemctl daemon-reload
-````
+```
 
 ## PHPLiteAdmin
 
