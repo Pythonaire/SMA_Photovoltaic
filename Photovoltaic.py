@@ -11,7 +11,7 @@ class PhotoVoltaic(Accessory):
     def __init__(self, *args, **kwargs): 
         super().__init__(*args, **kwargs)
         self.displayName = args[1] # args[1] contained the device/class Name given
-        self.dbFile = '/home/pwiechmann/smadata/SBFspot.db'
+        self.dbFile = '/home/xxxx/smadata/SBFspot.db'
         self.thisDay = "SELECT max(round(TotalYield, 1)) - min(round(TotalYield,1)) AS power FROM DayData WHERE date(TimeStamp, 'unixepoch') = CURRENT_DATE"
         self.thisYear = "SELECT max(round(TotalYield, 1)) - min(round(TotalYield,1)) AS power FROM DayData WHERE datetime(TimeStamp, 'unixepoch') > date('now','start of year')"
         self.set_info_service(firmware_revision='0.0.1', manufacturer=None, model='MacServer SMAInverter', serial_number="MSSMA01")
@@ -34,4 +34,13 @@ class PhotoVoltaic(Accessory):
         cur.execute(command)
         value = cur.fetchall() # return tuple
         logging.info('*** select value from {0} '.format(self.dbFile))
+        cur.close()
         return value[0][0]
+
+    @Accessory.run_at_interval(300) # SBFFspot update the values each 5 minutes
+    def run(self):
+        self.DayHarvest.set_value(self.select_power(self.thisDay))
+        self.YearHarvest.set_value(self.select_power(self.thisYear)/1000)
+
+    def stop(self):
+        logging.info('Stopping accessory.')
