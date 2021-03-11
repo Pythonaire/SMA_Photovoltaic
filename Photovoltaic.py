@@ -33,9 +33,13 @@ class PhotoVoltaic(Accessory):
         cur = conn.cursor()
         cur.execute(command)
         value = cur.fetchall() # return tuple
-        logging.info('*** select value from {0} '.format(self.dbFile))
+        logging.info('*** get value from SBFSpot : {0} '.format(value[0][0]))
         cur.close()
-        return value[0][0]
+        if value[0][0] == None:
+            power = 0
+        else:
+            power = value[0][0]
+        return power
 
     @Accessory.run_at_interval(300) # SBFFspot update the values each 5 minutes
     def run(self):
