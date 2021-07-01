@@ -100,49 +100,5 @@ sudo apt-get install -y phpliteadmin
 
 ## HAP-Python plugin
 
-Create 3 Version 4 UUID's with "https://www.uuidgenerator.net" for one service and two characteristics. 
-
-Extend services.json with:
-
-```#!/usr/bin/env python3
-
-"PhotoVoltaic": {
-"OptionalCharacteristics":
-["Name"],
-"RequiredCharacteristics": [
-"YieldDay",
-"YieldYear"
-],
-"UUID": "your UUID"
- }
- and characteristics.json with:
- 
- "YieldDay": {
-      "Format": "float",
-      "Permissions": [
-         "pr",
-         "ev"
-      ],
-      "UUID": "your UUID",
-      "unit": "Wh",
-          "maxValue": 100000,
-          "minValue": 0,
-          "minStep": 1
-   },
-   "YieldYear": {
-      "Format": "float",
-      "Permissions": [
-         "pr",
-         "ev"
-      ],
-      "UUID": "your UUID",
-      "unit": "kWh",
-      "maxValue": 100000000000,
-      "minValue": 0,
-      "minStep": 0.001
-   }
-```
- 
- Follow the HAP-Python installation steps by using Photovoltaic class. Copy the PhotoVoltaic class.
- Have Fun!
+Because of iOS App changes, just the definition of standard Outlet in conjunction with eve based characteritics "TotalConsumption" and "CurrentConsumption" work.
  
