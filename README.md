@@ -1,4 +1,4 @@
-# SMA-Photovoltaic  
+# SMA Photovoltaic  
 push SMA-Inverter Values to the Homekit, readable by Eve App
 
 Based on HAP-Python and SBFSpot.
